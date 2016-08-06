@@ -26,14 +26,8 @@
      *
      */
 
-    var module;
+    var module = angular.module('myApp.people.list', []);
 
-    try {
-        module = angular.module('myApp.people.list');
-    } catch (err) {
-        module = angular.module('myApp.people.list', [])
-    }
-    
     module.directive('peopleList', peopleList);
 
     function peopleListController($log) {
