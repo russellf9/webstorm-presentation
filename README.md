@@ -96,13 +96,19 @@ Now browse to the app at `http://127.0.0.1:8000/`
 (This is the URL we need to view to test the app rather than the localhost URL.)
 
 
-### Exercise Tasks TODO
+## Goals of the project
+
+The plan is create list of random people and display then within the UI
+
+### Tasks
 [ ] Get the debugger running
-[ ] 
+
+[ ] Add a Service to get the Random People data
 
 
 ### App TODO
 [ ] Fix Directive Live Template
+
 [X] Use modules
 
 
