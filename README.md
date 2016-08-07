@@ -83,13 +83,9 @@ Will store any number of items. Copy item (use the expand selection) then `⌘C`
 1. Open Source Control - `⌘9`
 1. Select the files or file to commit
 1. `⌘K`
-1. Use tab to focus on the commit button
+1. Use tab to focus on the commit button and select
 1. Push - `⇧⌘K`
-1.
-
-
-
-
+1. Use tab to focus on the push button and select
 
 
 
