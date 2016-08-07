@@ -1,4 +1,2 @@
-angular.module('components.people', ['myApp.people.list']);
-
-
-
+angular.module('myApp.components.people', ['myApp.people.list',
+    'components.person.personService']);

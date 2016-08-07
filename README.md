@@ -34,6 +34,25 @@ cd webstorm-presentation
 npm install
 ```
 
+
+### Run the Application
+
+```
+npm start
+npm start
+```
+A browser tab will open the app at `http://localhost:8000/index.html`.
+
+
+### Launch the Debug Configuration
+
+Select `^D` or press the green bug button
+
+Now browse to the app at `http://127.0.0.1:8000/`
+
+(This is the URL we need to view to test the app rather than the localhost URL.)
+
+
 ### Learn Shortcuts
 
 To avoid using the mouse it is essential to learn keyboard shortcuts, there seem to be hundreds of them for IntelliJ!
@@ -153,35 +172,46 @@ Name - Webstorm Presentation
 URL - http://127.0.0.1:8000/
 
 
-### Run the Application
-
-```
-npm start
-```
-A browser tab will open the app at `http://localhost:8000/index.html`.
-
-
-### Launch the Debug Configuration
-
-Select `^D` or press the green bug button
-
-Now browse to the app at `http://127.0.0.1:8000/`
-
-(This is the URL we need to view to test the app rather than the localhost URL.)
-
 
 ## Goals of the project
 
 The plan is create list of random people and display then within the UI
 
 ### Tasks
-* [ ] Get the debugger running
-* [ ] Add a Service to get the Random People data
+* [X] Get the debugger running
+* [X] Add a Service to get the Random People data
+* [X] Add a UI to display a single person object
+* [ ] Create a UI to display a list of persons
 
+#### Random Person
+
+To get data for a random person the `http://api.randomuser.me` api can be used.
+
+Select `double - ⇧` to open search everywhere
+Enter `Restful `
+
+Select `Test RESTful web service`
+
+This opens a UI we can use to test the API, enter the api url in the Host/port input and enter ⏎ 
+
+This will display the data response
+
+
+#### Single Person object
+
+For the markup use the [intellij-bootstrap3](https://github.com/bodiam/intellij-bootstrap3#panel) 
+
+Select `⌘J`, and enter 'bs-' and scroll or enter the text for the [Bootstrap component](http://getbootstrap.com/components/#panels) required.
+
+
+
+## App Improvements
 
 ### App TODO
 * [ ] Fix Directive Live Template
 * [X] Use modules
+* [ ] Use Controller As syntax
+* [X] Add Live Template for $http
 
 
 ### Links
