@@ -40,6 +40,39 @@ To avoid using the mouse it is essential to learn keyboard shortcuts, there seem
 
 TODO add some basic shortcuts here...
 
+Tool Windows
+`⌘ - 1` Project
+`⌘ - 2` Favourites
+`⌘ - 9' Version control
+`⌥ - F12` Terminal
+
+`⌘E` - recent files
+
+`⇧F12` - Hide other windows ( essential to stay focused on one file )
+
+Search within file (using Ace)
+(This process will move the insertion point)
+`⌃;`, then enter a letter near the search item
+Then, select the letter displayed to jump to it
+
+`⌘↑` - Opens a mini navigation bar, use this to move around rather than going back to the Project view.
+
+
+Expanded Selection and Move
+`⌥↑`  Enlarge Selection
+`⌥↓`  Shrink Selection
+
+Then move selection up
+`⇧⌘↑`
+or down
+`⇧⌘↓`
+
+Clipboard - way better than using simple Cut and Paste
+Will store any number of items
+Copy item (use the expand selection)
+`⇧⌘ V` - Then select the number to paste item  
+
+
 ### Modify Webstorm Settings
 
 TODO clarify
@@ -146,4 +179,8 @@ The plan is create list of random people and display then within the UI
 * [Daring Fireball Markdown documentation](https://daringfireball.net/projects/markdown/)
 * []()
 * []()
+
+
+### OSX Keys
+⌘ ⇧ ⌥ ⌃ → ←  ↑ ↓⌫ Fn
 
