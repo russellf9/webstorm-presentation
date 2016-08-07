@@ -75,6 +75,16 @@ or down
 
 Will store any number of items. Copy item (use the expand selection)
 
+**Git**
+
+1. Open Source Control - `⌘9`
+1. Select the files or file to commit
+1. `⌃V`
+1. Select 2 to commit file
+
+
+
+
 
 `⇧⌘ V` - Then select the number to paste item  
 
