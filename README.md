@@ -40,7 +40,7 @@ To avoid using the mouse it is essential to learn keyboard shortcuts, there seem
 
 TODO add some basic shortcuts here...
 
-Tool Windows
+**Tool Windows**
 * `⌘ - 1` Project
 * `⌘ - 2` Favourites
 * `⌘ - 9` Version control
@@ -50,7 +50,7 @@ Tool Windows
 
 * `⇧F12` - Hide other windows ( essential to stay focused on one file )
 
-Search within file (using Ace)
+**Search within file** (using Ace)
 (This process will move the insertion point)
 
 `⌃;`, then enter a letter near the search item
@@ -60,7 +60,7 @@ Then, select the letter displayed to jump to it
 `⌘↑` - Opens a mini navigation bar, use this to move around rather than going back to the Project view.
 
 
-Expanded Selection and Move
+**Expanded Selection and Move
 `⌥↑`  Enlarge Selection
 
 `⌥↓`  Shrink Selection
@@ -71,7 +71,7 @@ Then move selection up
 or down
 `⇧⌘↓`
 
-Clipboard - way better than using simple Cut and Paste
+**Clipboard** - way better than using simple Cut and Paste
 
 Will store any number of items. Copy item (use the expand selection)
 
