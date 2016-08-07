@@ -73,22 +73,24 @@ or down
 
 **Clipboard** - way better than using simple Cut and Paste
 
-Will store any number of items. Copy item (use the expand selection)
+Will store any number of items. Copy item (use the expand selection) then `⌘C` 
+
+`⇧⌘ V` - Then select the number to paste item  
+
 
 **Git**
 
 1. Open Source Control - `⌘9`
 1. Select the files or file to commit
-1. `⌃V`
-1. Select 2 to commit file
+1. `⌘K`
 1. Use tab to focus on the commit button
 1. Push - `⇧⌘K`
+1.
 
 
 
 
 
-`⇧⌘ V` - Then select the number to paste item  
 
 
 ### Modify Webstorm Settings
