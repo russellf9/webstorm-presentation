@@ -39,9 +39,8 @@ npm install
 
 ```
 npm start
-npm start
 ```
-A browser tab will open the app at `http://localhost:8000/index.html`.
+The app is now available at `http://localhost:8000/index.html`.
 
 
 ### Launch the Debug Configuration
@@ -79,7 +78,7 @@ Then, select the letter displayed to jump to it
 `⌘↑` - Opens a mini navigation bar, use this to move around rather than going back to the Project view.
 
 
-**Expanded Selection and Move
+**Expanded Selection and Move**
 `⌥↑`  Enlarge Selection
 
 `⌥↓`  Shrink Selection
@@ -213,6 +212,8 @@ Select `⌘J`, and enter 'bs-' and scroll or enter the text for the [Bootstrap c
 * [ ] Use Controller As syntax
 * [X] Add Live Template for $http
 * [X] Fix broken links
+* [ ] Create Live Template for a $q promise
+* [ ] Create Live Template for a handling of a $http promise
 
 
 ### Links
