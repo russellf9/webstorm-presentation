@@ -212,6 +212,7 @@ Select `⌘J`, and enter 'bs-' and scroll or enter the text for the [Bootstrap c
 * [X] Use modules
 * [ ] Use Controller As syntax
 * [X] Add Live Template for $http
+* [X] Fix broken links
 
 
 ### Links
@@ -221,7 +222,7 @@ Select `⌘J`, and enter 'bs-' and scroll or enter the text for the [Bootstrap c
 * [PDF Cheatsheat](https://resources.jetbrains.com/asse ts/products/webstorm/WebStorm_ReferenceCard.pdf)
 * [johnlindquist/ShortcutHero](https://github.com/johnlindquist/ShortcutHero)
 * [WebStorm - Things You Probably Didn't Know](https://www.youtube.com/watch?v=P3yGl4Kfwhs)
-* [10 WebStorm Shortcuts You Need to Know](WebStorm - Things You Probably Didn’t Know)
+* [10 WebStorm Shortcuts You Need to Know](https://blog.jetbrains.com/webstorm/2015/06/10-webstorm-shortcuts-you-need-to-know/)
 * [Daring Fireball Markdown documentation](https://daringfireball.net/projects/markdown/)
 * []()
 * []()
