@@ -46,10 +46,12 @@
 
 function peopleListController ($log, $scope, personService) {
 
+    $scope.people = [];
+
     // test a single person
     personService.getPerson()
         .then(function (data) {
-            $scope.person = data;
+            $scope.people.push(data);
         })
         .catch(function (error) {
             $log.error('error', error);

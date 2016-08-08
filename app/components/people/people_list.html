@@ -1,4 +1,6 @@
-<person
-        data='person'
-        update-fn='update'>
-    <person/>
+<div ng-repeat="person in people track by $index">
+    <person
+            data='person'
+            update-fn='update'>
+        <person/>
+</div>

@@ -4,9 +4,9 @@ The intention of this project to create a "Real World" project where the many fe
 
 The three main intentions of of following the exercise are:
 
-1. "Learn one IDE and learn it well", ( so there is no need to use the mouse! ) 
-2. Stay focused on the one task in hand - (No context switching)
-3. Use the debugger by default
+1. "Learn one IDE and learn it well", ( so there is no need (or rather little need) to use the mouse! ) 
+2. Stay focused on the one task in hand - (No context switching, view one file at a time)
+3. Use the debugger by default - (Auto update can be set up, so any changes are reflected in the Browser)
  
 ## Project Introduction
 
@@ -180,7 +180,8 @@ The plan is create list of random people and display then within the UI
 * [X] Get the debugger running
 * [X] Add a Service to get the Random People data
 * [X] Add a UI to display a single person object
-* [ ] Create a UI to display a list of persons
+* [X] Create a UI to display a list of persons
+* [ ] Create a UI to add more people
 
 #### Random Person
 
