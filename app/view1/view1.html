@@ -1,10 +1,23 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <people-list></people-list>
+            <people-list
+                    get-fn="addPerson"
+                    people="main.people">
+            </people-list>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="btn-group">
+                <button type="button"
+                        class="btn btn-default"
+                        ng-click="main.addPerson()">Add person
+                </button>
+            </div>
         </div>
     </div>
 </div>

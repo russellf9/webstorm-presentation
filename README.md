@@ -210,7 +210,8 @@ Select `⌘J`, and enter 'bs-' and scroll or enter the text for the [Bootstrap c
 ### App TODO
 * [X] Fix Directive Live Template
 * [X] Use modules
-* [ ] Use Controller As syntax
+* [X] Use Controller As syntax
+* [X] Use `main` JS file
 * [X] Add Live Template for $http
 * [X] Fix broken links
 * [ ] Create Live Template for a $q promise

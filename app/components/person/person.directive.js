@@ -14,7 +14,7 @@
      * @param {data} data An data two-way binding
      * @param {function} updateFn An output function
      *
-     * @description Prodides the UI to display a person
+     * @description Provides the UI to display a person
      *
      * Trying to follow the style guidelines from: {https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#angular-docs Angular 1 Style Guide <br>
      * @example

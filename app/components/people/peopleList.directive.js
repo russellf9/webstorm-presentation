@@ -26,7 +26,7 @@
      *
      */
 
-    var module = angular.module('myApp.people.list', ['components.person.personService']);
+    var module = angular.module('myApp.people.list', []);
 
     module.directive('peopleList', peopleList);
 
@@ -34,7 +34,8 @@
         return {
             restrict: 'AE',
             scope: {
-                input: '=?',
+                people: '=?',
+                getFn: '&?',
                 updateFn: '&?'
             },
             templateUrl: 'components/people/people_list.html',
@@ -44,20 +45,15 @@
 
 }());
 
-function peopleListController ($log, $scope, personService) {
+function peopleListController ($log, $scope) {
 
-    $scope.people = [];
 
-    // test a single person
-    personService.getPerson()
-        .then(function (data) {
-            $scope.people.push(data);
-        })
-        .catch(function (error) {
-            $log.error('error', error);
-        })
-        .finally(function () {
-        });
+    // TODO to implement
+    $scope.getFn = function() {
+        console.log('GET!');
+    };
+
+
 
     // TODO to implement
     $scope.update = function () {
