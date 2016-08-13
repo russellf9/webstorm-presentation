@@ -13,7 +13,17 @@
 
         main.people = [];
 
+        main.limit = 3;
+
+        main.addPersonDisabled = false;
+
+        main.removePersonDisabled = false;
+        
         main.addPerson = addPerson;
+
+        main.removePerson = removePerson;
+
+
 
 
         // ==== Function definitions ====
@@ -28,7 +38,19 @@
                     $log.error('error', error);
                 })
                 .finally(function () {
+                    evaluateButtons();
                 });
+        }
+
+        function removePerson () {
+            main.people.pop();
+        }
+
+        // ==== Utility functions ====
+
+        function evaluateButtons() {
+            main.addPersonDisabled = (main.people.length > main.limit);
+            main.removePersonDisabled = (main.people.length === 0);
         }
     }
 })();

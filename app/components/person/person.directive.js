@@ -49,7 +49,9 @@
                 updateFn: '&'
             },
             templateUrl: 'components/person/person.html',
-            controller: personController
+            controller: personController,
+            controllerAs: 'person',
+            bindToController: true // because the scope is isolated
         }
     }
 }());

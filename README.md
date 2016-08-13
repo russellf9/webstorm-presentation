@@ -170,6 +170,14 @@ Set the following:
 Name - Webstorm Presentation
 URL - http://127.0.0.1:8000/
 
+To add breakpoints select the gutter where you want the break to be
+
+⌘ ⇧ F8 - To show breakpoints
+
+Use tab to select items..
+
+Creating Groups looks like a cool option!
+
 
 
 ## Goals of the project
@@ -181,7 +189,8 @@ The plan is create list of random people and display then within the UI
 * [X] Add a Service to get the Random People data
 * [X] Add a UI to display a single person object
 * [X] Create a UI to display a list of persons
-* [ ] Create a UI to add more people
+* [X] Create a UI to add more people
+* [X] Create a UI to remove people
 
 #### Random Person
 
@@ -216,6 +225,7 @@ Select `⌘J`, and enter 'bs-' and scroll or enter the text for the [Bootstrap c
 * [X] Fix broken links
 * [ ] Create Live Template for a $q promise
 * [ ] Create Live Template for a handling of a $http promise
+* [X] Import dependencies locally rather than using a CDN
 
 
 ### Links

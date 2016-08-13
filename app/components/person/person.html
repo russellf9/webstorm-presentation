@@ -1,12 +1,19 @@
 <div class="panel panel-success">
     <div class="panel-heading panel-heading">
-        <h3 class="panel-title">{{ data.name.title }} {{ data.name.first }} {{ data.name.last }}</h3>
+        <h2 class="panel-title">{{ person.data.name.title }} {{ person.name.first }} {{ person.data.name.last }}</h3>
     </div>
     <div class="panel-body">
-        <img src="{{ data.picture.thumbnail }}"
-             class="img-responsive left-block img-circle"
-             alt="Image">
-        <p>Email: {{ data.email }}</p>
-        <p>Phone: {{ data.phone }}</p>
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <img src="{{ person.data.picture.thumbnail}}"
+                     class="img-responsive left-block img-circle"
+                     alt="Image">
+            </div>
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                <p>Email: {{ person.data.email }}</p>
+
+                <p>Phone: {{ person.data.phone }}</p>
+            </div>
+        </div>
     </div>
 </div>

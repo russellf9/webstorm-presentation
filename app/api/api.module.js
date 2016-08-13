@@ -1,1 +1,1 @@
-angular.module('myApp.api', ['api.person']);
+    angular.module('myApp.api', ['api.person']);

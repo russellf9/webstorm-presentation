@@ -10,19 +10,20 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/" />
     <title>Learning Webstorm</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="app.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
 <ul class="menu">
-    <li><a href="#!/view1">Teams</a></li>
-    <li><a href="#!/view2">Information</a></li>
+    <li><a href="/view1">Teams</a></li>
+    <li><a href="/view2">Information</a></li>
 </ul>
 
 <!--[if lt IE 7]>
@@ -36,50 +37,50 @@
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
-<script src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- VENDOR DEPENDENCIES -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
+
+<!-- ANGULAR DEPENDENCIES Î-->
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 
+
+<!-- MAIN APP FILE -->
 <script src="app.js"></script>
 
+
+<!-- ANGULAR CORE -->
 <script src="core.module.js"></script>
 
+
+<!-- API -->
 <script src="api/api.module.js"></script>
 <script src="api/person/person.api.js"></script>
 
+
+<!-- PEOPLE -->
 <script src="components/people/people.module.js"></script>
-
-<script src="components/people/person.service.js"></script>
 <script src="components/people/peopleList.directive.js"></script>
-
-
-<script src="components/person/person.module.js"></script>
-<script src="components/person/person.directive.js"></script>
-
-
 <script src="components/people/people.controller.js"></script>
 
 
+<!-- PERSON -->
+<script src="components/person/person.module.js"></script>
+<script src="components/people/person.service.js"></script>
+<script src="components/person/person.directive.js"></script>
 
 
+<!-- VIEW MODULES & CONTROLLERS -->
 <script src="view1/view1.js"></script>
 <script src="view2/view2.js"></script>
 
 
-
-
-
+<!-- LEGACY -->
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>
-
-
-
-
-
-
 
 
 </body>

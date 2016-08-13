@@ -26,7 +26,7 @@
      *
      */
 
-    var module = angular.module('components.person.personService', ['api.person']);
+    var module = angular.module('components.person.personService', ['myApp.api']);
 
     module.factory('personService', personService);
 
@@ -58,6 +58,9 @@
                     return $q.reject(response.data);
                 });
         }
+
+
+        data
     }
 }());
 

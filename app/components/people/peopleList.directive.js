@@ -14,7 +14,9 @@
      * @param {data} input An input two-way binding
      * @param {function} updateFn An output function
      *
-     * @description Provides a UI to hold a list of people
+     * @description
+     * Provides a UI to hold a list of people
+     *
      * Trying to follow the style guidelines from: {https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#angular-docs Angular 1 Style Guide <br>
      * @example
      <pre>
@@ -39,7 +41,9 @@
                 updateFn: '&?'
             },
             templateUrl: 'components/people/people_list.html',
-            controller: peopleListController
+            controller: peopleListController,
+            controllerAs: 'peopleList',
+            bindToController: true // because the scope is isolated
         }
     }
 
@@ -49,15 +53,16 @@ function peopleListController ($log, $scope) {
 
 
     // TODO to implement
-    $scope.getFn = function() {
+    $scope.getFn = function () {
         console.log('GET!');
     };
-
 
 
     // TODO to implement
     $scope.update = function () {
     };
+
+
 }
 
 

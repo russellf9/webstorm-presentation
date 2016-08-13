@@ -1,13 +1,12 @@
 <div class="container">
     <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             <people-list
                     get-fn="addPerson"
                     people="main.people">
             </people-list>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-
         </div>
     </div>
     <div class="row">
@@ -15,7 +14,16 @@
             <div class="btn-group">
                 <button type="button"
                         class="btn btn-default"
-                        ng-click="main.addPerson()">Add person
+                        ng-class="main.addPersonDisabled ? 'disabled' : ''"
+                        ng-click="main.addPerson()">
+                    <span>Add person</span>
+                </button>
+                <button type="button"
+                        class="btn btn-default"
+                        ng-if="main.people.length"
+                        ng-class="main.removePersonDisabled ? 'disabled' : ''"
+                        ng-click="main.removePerson()">
+                    <span>Remove person</span>
                 </button>
             </div>
         </div>
