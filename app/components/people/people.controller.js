@@ -30,6 +30,10 @@
 
         main.pickPerson = pickPerson;
 
+        main.deselectPerson = deselectPerson;
+
+        main.togglePerson = togglePerson;
+
 
         evaluateButtons();
 
@@ -51,12 +55,18 @@
         }
 
         // transfers person to another list
-        function pickPerson ( person ) {
+        // (and makes them selected)
+        function pickPerson ( ) {
             // if (!person) {
                 var person = removePerson();
+            person.selected = true;
             // }
             main.pickedPeople.push(person);
             evaluateButtons();
+        }
+
+        function deselectPerson( person ) {
+            person.selected = false;
         }
 
         function removePerson () {
@@ -64,6 +74,18 @@
             evaluateButtons();
             return person;
         }
+
+
+        function togglePerson( person ) {
+            console.log('toggle person ', person);
+            if (!person ) {
+                $log.error('No person has been defined!');
+                return;
+            }
+            person.selected =! person.selected;
+        }
+
+
 
         // ==== Utility functions ====
 

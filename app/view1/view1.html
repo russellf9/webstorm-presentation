@@ -2,13 +2,20 @@
     <div class="row">
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             <people-list
-                    get-fn="addPerson"
-                    people="main.people">
+                    get-fn="main.addPerson"
+                    people="main.people"
+                    toggle-select-fn="main.togglePerson">
             </people-list>
+
+
         </div>
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             <people-list
-                    people="main.pickedPeople">
+                    people="main.pickedPeople"
+                    pick-fn="main.pickPerson"
+                    toggle-select-fn="main.togglePerson"
+                    deselect-fn="main.deselectPerson"
+                    remove-fn="main.removePerson">
             </people-list>
         </div>
     </div>

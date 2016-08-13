@@ -6,13 +6,14 @@
         </h2>
 
         <div class="pull-right">
-
             <button type="button"
                     class="btn btn-success"
-                    ng-click="main.removePerson()">
-                <span><i class="fa fa-heart fa-lg"></i></span>
+                    ng-click="person.toggleSelectPerson(person.data)">
+                <span>
+                    <i ng-if="person.data.selected" class="fa fa-heart fa-lg"></i>
+                    <i ng-if="!person.data.selected" class="fa fa-heart-o fa-lg"></i>
+                </span>
             </button>
-
         </div>
     </div>
     <div class="panel-body">

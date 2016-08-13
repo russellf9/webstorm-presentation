@@ -18,12 +18,12 @@
      *
      * Trying to follow the style guidelines from: {https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#angular-docs Angular 1 Style Guide <br>
      * @example
-        <pre>
-         <person
-            person='data'
-            update-fn='update'>
-         <person/>
-        <pre>
+     <pre>
+     <person
+     person='data'
+     update-fn='update'>
+     <person/>
+     <pre>
      *
      */
 
@@ -37,15 +37,56 @@
 
     module.directive('person', person);
 
-    function personController($log) {
+    function personController ($log, $scope) {
 
-    }
+        var person = this;
 
-    function person() {
+
+        person.removePerson = removePerson;
+
+        person.deselectPerson = deselectPerson;
+
+        person.toggleSelectPerson = toggleSelectPerson;
+
+        person.toggleSelectFn();
+
+
+        function removePerson () {
+            console.log('A removePerson');
+            if (typeof person.removeFn == 'function') {
+                person.removeFn()();
+            }
+        }
+
+        function deselectPerson () {
+            console.log('A deselectPerson');
+            if (typeof person.deselectFn == 'function') {
+                person.deselectFn()( person.data );
+            }
+        }
+
+        function toggleSelectPerson( aPerson) {
+            console.log('toggleSelectPerson: ', aPerson);
+
+            if (typeof person.toggleSelectFn == 'function') {
+                person.toggleSelectFn()( aPerson );
+            }
+
+
+
+        }
+
+
+    };
+
+    function person () {
         return {
             restrict: 'AE',
             scope: {
                 data: '=',
+                removeFn: '&?',
+                deselectFn: '&',
+                toggleSelectFn: '&',
                 updateFn: '&'
             },
             templateUrl: 'components/person/person.html',

@@ -32,13 +32,47 @@
 
     module.directive('peopleList', peopleList);
 
+    function peopleListController ($log) {
+
+        var peopleList = this;
+
+        peopleList.removePerson = removePerson;
+
+        peopleList.deselectPerson = deselectPerson;
+
+        peopleList.toggleSelectPerson = toggleSelectPerson;
+
+        function removePerson () {
+            console.log('B removePerson');
+
+            if (typeof peopleList.removeFn == 'function') {
+                peopleList.removeFn()();
+            }
+        }
+
+        function deselectPerson( person ) {
+            if (typeof peopleList.deselectFn == 'function') {
+                peopleList.deselectFn()(person);
+            }
+        }
+
+        function toggleSelectPerson( person ) {
+            console.log('peopleList toggle ', person)
+            if (typeof peopleList.toggleSelectFn == 'function') {
+                peopleList.toggleSelectFn()(person);
+            }
+        }
+
+    }
+
     function peopleList () {
         return {
             restrict: 'AE',
             scope: {
                 people: '=?',
-                getFn: '&?',
-                updateFn: '&?'
+                deselectFn: '&',
+                toggleSelectFn: '&',
+                removeFn: '&'
             },
             templateUrl: 'components/people/people_list.html',
             controller: peopleListController,
@@ -46,23 +80,9 @@
             bindToController: true // because the scope is isolated
         }
     }
-
 }());
 
-function peopleListController ($log, $scope) {
 
 
-    // TODO to implement
-    $scope.getFn = function () {
-        console.log('GET!');
-    };
-
-
-    // TODO to implement
-    $scope.update = function () {
-    };
-
-
-}
 
 
