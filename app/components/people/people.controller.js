@@ -11,19 +11,27 @@
 
         var main = this;
 
+
         main.people = [];
+
+        main.pickedPeople = [];
+
 
         main.limit = 3;
 
         main.addPersonDisabled = false;
 
         main.removePersonDisabled = false;
-        
+
+
         main.addPerson = addPerson;
 
         main.removePerson = removePerson;
 
+        main.pickPerson = pickPerson;
 
+
+        evaluateButtons();
 
 
         // ==== Function definitions ====
@@ -42,15 +50,26 @@
                 });
         }
 
+        // transfers person to another list
+        function pickPerson ( person ) {
+            // if (!person) {
+                var person = removePerson();
+            // }
+            main.pickedPeople.push(person);
+            evaluateButtons();
+        }
+
         function removePerson () {
-            main.people.pop();
+            var person = main.people.pop();
+            evaluateButtons();
+            return person;
         }
 
         // ==== Utility functions ====
 
-        function evaluateButtons() {
+        function evaluateButtons () {
             main.addPersonDisabled = (main.people.length > main.limit);
-            main.removePersonDisabled = (main.people.length === 0);
+            main.removePersonDisabled = (main.people.length === 0) ? true : false;
         }
     }
 })();
