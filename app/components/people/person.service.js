@@ -44,6 +44,11 @@
 
         // Returns a random person
         function _getPerson () {
+
+            var person = {name: {'title': 'mr', 'last': 'wenban', first: 'russell'}};
+
+            return person;
+
             return personApi.getPerson()
                 .then(function (response) {
                     if (typeof response.data === 'object') {
@@ -58,9 +63,6 @@
                     return $q.reject(response.data);
                 });
         }
-
-
-        data
     }
 }());
 

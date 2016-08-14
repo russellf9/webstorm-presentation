@@ -4,6 +4,8 @@
 angular.module('myApp', [
     'core', // core
 
+    'vendor',
+
     'myApp.view1', // views
     'myApp.view2',
 

@@ -8,8 +8,7 @@
      * @author russell
      * @date 07/08/2016
      *
-     * @name
-     * myApp.components.person:person
+     * @name myApp.components.person:person
      *
      * @param {data} data An data two-way binding
      * @param {function} updateFn An output function
@@ -41,51 +40,21 @@
 
         var person = this;
 
-
-        person.removePerson = removePerson;
-
-        person.deselectPerson = deselectPerson;
-
         person.toggleSelectPerson = toggleSelectPerson;
 
-        person.toggleSelectFn();
 
-
-        function removePerson () {
-            console.log('A removePerson');
-            if (typeof person.removeFn == 'function') {
-                person.removeFn()();
-            }
-        }
-
-        function deselectPerson () {
-            console.log('A deselectPerson');
-            if (typeof person.deselectFn == 'function') {
-                person.deselectFn()( person.data );
-            }
-        }
-
-        function toggleSelectPerson( aPerson) {
-            console.log('toggleSelectPerson: ', aPerson);
-
+        function toggleSelectPerson( aPerson ) {
             if (typeof person.toggleSelectFn == 'function') {
                 person.toggleSelectFn()( aPerson );
             }
-
-
-
         }
-
-
-    };
+    }
 
     function person () {
         return {
             restrict: 'AE',
             scope: {
                 data: '=',
-                removeFn: '&?',
-                deselectFn: '&',
                 toggleSelectFn: '&',
                 updateFn: '&'
             },

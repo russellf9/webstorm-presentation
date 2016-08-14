@@ -1,14 +1,13 @@
 <div class="panel panel-success">
     <div class="panel-heading clearfix">
-
-        <h2 class="panel-title pull-left">{{ person.data.name.title }} {{ person.name.first }} {{ person.data.name.last
-            }}
+        <h2 class="panel-title pull-left">
+            <span>{{ person.data.name.title }} {{ person.name.first }} {{ person.data.name.last }}</span>
+            <!--<span>{{ person.data.name | json }}</span>-->
         </h2>
-
         <div class="pull-right">
             <button type="button"
                     class="btn btn-success"
-                    ng-click="person.toggleSelectPerson(person.data)">
+                    ng-click="person.toggleSelectPerson( person.data )">
                 <span>
                     <i ng-if="person.data.selected" class="fa fa-heart fa-lg"></i>
                     <i ng-if="!person.data.selected" class="fa fa-heart-o fa-lg"></i>
@@ -25,7 +24,6 @@
             </div>
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                 <p>Email: {{ person.data.email }}</p>
-
                 <p>Phone: {{ person.data.phone }}</p>
             </div>
         </div>

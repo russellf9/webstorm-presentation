@@ -41,6 +41,8 @@
 
         // returns a Promise for a random person
         function _getPerson () {
+
+
             return $http.get('http://api.randomuser.me');
         }
     }

@@ -42,16 +42,20 @@
 
         function addPerson () {
 
-            personService.getPerson()
-                .then(function (data) {
-                    main.people.push(data);
-                })
-                .catch(function (error) {
-                    $log.error('error', error);
-                })
-                .finally(function () {
-                    evaluateButtons();
-                });
+            var person = personService.getPerson();
+
+
+            main.people.push(person);
+            // personService.getPerson()
+            //     .then(function (data) {
+            //         main.people.push(data);
+            //     })
+            //     .catch(function (error) {
+            //         $log.error('error', error);
+            //     })
+            //     .finally(function () {
+            //         evaluateButtons();
+            //     });
         }
 
         // transfers person to another list
@@ -75,23 +79,50 @@
             return person;
         }
 
-
+        // Toggles the `like` icon
+        // Swaps the Person to the correct list
         function togglePerson( person ) {
             console.log('toggle person ', person);
             if (!person ) {
                 $log.error('No person has been defined!');
                 return;
             }
+
+            // If the person is just about to be selected we add to the `picked people`
+            // But first we remove them from the `main.people` array
+            if ( !person.selected ) {
+                removeItemFromCollection( person, main.people );
+                main.pickedPeople.push(person);
+            } else {
+                // Here we are returning the person to the 'main` list
+                removeItemFromCollection( person, main.pickedPeople );
+                main.people.push(person);
+            }
+
             person.selected =! person.selected;
+
+            evaluateButtons();
+
         }
 
 
 
         // ==== Utility functions ====
 
+
         function evaluateButtons () {
             main.addPersonDisabled = (main.people.length > main.limit);
             main.removePersonDisabled = (main.people.length === 0) ? true : false;
+        }
+
+        // removes an item from the supplied Array
+        function removeItemFromCollection ( item, collection ) {
+            var index = collection.indexOf(item);
+            if (index < 0) {
+                $log.error('Item not found!');
+                return;
+            }
+            collection.splice(index, 1);
         }
     }
 })();

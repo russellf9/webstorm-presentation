@@ -38,8 +38,6 @@
 
         peopleList.removePerson = removePerson;
 
-        peopleList.deselectPerson = deselectPerson;
-
         peopleList.toggleSelectPerson = toggleSelectPerson;
 
         function removePerson () {
@@ -50,11 +48,6 @@
             }
         }
 
-        function deselectPerson( person ) {
-            if (typeof peopleList.deselectFn == 'function') {
-                peopleList.deselectFn()(person);
-            }
-        }
 
         function toggleSelectPerson( person ) {
             console.log('peopleList toggle ', person)
@@ -70,7 +63,6 @@
             restrict: 'AE',
             scope: {
                 people: '=?',
-                deselectFn: '&',
                 toggleSelectFn: '&',
                 removeFn: '&'
             },

@@ -1,8 +1,6 @@
 <div ng-repeat="person in peopleList.people track by $index">
     <person
             data='person'
-            remove-fn="peopleList.removePerson"
-            deselect-fn="peopleList.deselectPerson"
             toggle-select-fn="peopleList.toggleSelectPerson"
             update-fn='update'>
         <person/>
