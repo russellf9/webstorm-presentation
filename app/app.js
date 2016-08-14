@@ -23,6 +23,5 @@ angular.module('myApp', [
 
     $routeProvider.otherwise({redirectTo: '/view1'});
 }])
-    .run(function() {
-        console.log('hi 2');
+    .run(function () {
     });

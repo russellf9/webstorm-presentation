@@ -41,17 +41,14 @@
         peopleList.toggleSelectPerson = toggleSelectPerson;
 
         function removePerson () {
-            console.log('B removePerson');
-
-            if (typeof peopleList.removeFn == 'function') {
+            if (typeof peopleList.removeFn === 'function') {
                 peopleList.removeFn()();
             }
         }
 
 
         function toggleSelectPerson( person ) {
-            console.log('peopleList toggle ', person)
-            if (typeof peopleList.toggleSelectFn == 'function') {
+            if (typeof peopleList.toggleSelectFn === 'function') {
                 peopleList.toggleSelectFn()(person);
             }
         }
@@ -66,7 +63,7 @@
                 toggleSelectFn: '&',
                 removeFn: '&'
             },
-            templateUrl: 'components/people/people_list.html',
+            templateUrl: 'components/people/people-list.html',
             controller: peopleListController,
             controllerAs: 'peopleList',
             bindToController: true // because the scope is isolated
