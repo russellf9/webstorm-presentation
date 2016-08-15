@@ -45,9 +45,7 @@
         // Returns a random person
         function _getPerson () {
 
-            var person = {name: {'title': 'mr', 'last': 'wenban', first: 'russell'}};
-
-            return person;
+            // return getDummyPerson();
 
             return personApi.getPerson()
                 .then(function (response) {
@@ -62,6 +60,11 @@
                     // something went wrong
                     return $q.reject(response.data);
                 });
+        }
+
+        // Note use if the internet isn't working
+        function getDummyPerson() {
+            return {name: {'title': 'mr', 'last': 'wenban', first: 'russell'}};
         }
     }
 }());

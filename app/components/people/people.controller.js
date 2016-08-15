@@ -26,7 +26,9 @@
 
         main.addPerson = addPerson;
 
-        main.removePerson = removePerson;
+        main.removeLastPerson = removeLastPerson;
+
+        main.removeFirstPerson = removeFirstPerson;
 
         main.pickPerson = pickPerson;
 
@@ -35,49 +37,55 @@
         main.togglePerson = togglePerson;
 
 
-        evaluateButtons();
+        update();
 
 
         // ==== Function definitions ====
 
         function addPerson () {
 
-            var person = personService.getPerson();
+           // var person = personService.getPerson();
 
-
-            main.people.push(person);
-            // personService.getPerson()
-            //     .then(function (data) {
-            //         main.people.push(data);
-            //     })
-            //     .catch(function (error) {
-            //         $log.error('error', error);
-            //     })
-            //     .finally(function () {
-            //         evaluateButtons();
-            //     });
-
-            evaluateButtons();
+           // main.people.push(person); //Note Use if no internet!
+            personService.getPerson()
+                .then(function (data) {
+                    main.people.push(data);
+                })
+                .catch(function (error) {
+                    $log.error('error', error);
+                })
+                .finally(function () {
+                    update();
+                });
         }
 
         // transfers person to another list
         // (and makes them selected)
         function pickPerson () {
-            // if (!person) {
-            var person = removePerson();
+
+            var person = removeLastPerson();
             person.selected = true;
-            // }
             main.pickedPeople.push(person);
-            evaluateButtons();
+
+            update();
         }
 
         function deselectPerson (person) {
             person.selected = false;
         }
 
-        function removePerson () {
+
+        function removeLastPerson () {
             var person = main.people.pop();
-            evaluateButtons();
+            update();
+
+            return person;
+        }
+
+        function removeFirstPerson () {
+            var person = main.people.shift();
+            update();
+
             return person;
         }
 
@@ -102,16 +110,23 @@
 
             person.selected = !person.selected;
 
-            evaluateButtons();
+            update();
         }
 
 
         // ==== Utility functions ====
 
 
-        function evaluateButtons () {
-            main.addPersonDisabled = main.people.length > main.limit;
+        function update () {
+            // main.addPersonDisabled = main.people.length > main.limit;
+            main.addPersonDisabled = main.people.length >= main.limit;
             main.removePersonDisabled = main.people.length === 0;
+
+            if ( main.people.length > main.limit ) {
+                $log.info('We have to many people in the list!');
+                removeFirstPerson();
+                update();
+            }
         }
 
         // removes an item from the supplied Array

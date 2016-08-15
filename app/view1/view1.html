@@ -13,7 +13,7 @@
                     pick-fn="main.pickPerson"
                     toggle-select-fn="main.togglePerson"
                     deselect-fn="main.deselectPerson"
-                    remove-fn="main.removePerson">
+                    remove-fn="main.removeFirstPerson">
             </people-list>
         </div>
     </div>
@@ -29,7 +29,7 @@
                 <button type="button"
                         class="btn btn-default"
                         ng-class="main.removePersonDisabled ? 'disabled' : ''"
-                        ng-click="main.removePerson()">
+                        ng-click="main.removeFirstPerson()">
                     <span>Remove person</span>
                 </button>
                 <button type="button"
