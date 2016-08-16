@@ -34,6 +34,8 @@
 
         main.deselectPerson = deselectPerson;
 
+        main.removeSelectedPerson = removeSelectedPerson;
+
         main.togglePerson = togglePerson;
 
 
@@ -44,9 +46,9 @@
 
         function addPerson () {
 
-           // var person = personService.getPerson();
+            // var person = personService.getPerson();
 
-           // main.people.push(person); //Note Use if no internet!
+            // main.people.push(person); //Note Use if no internet!
             personService.getPerson()
                 .then(function (data) {
                     main.people.push(data);
@@ -89,6 +91,10 @@
             return person;
         }
 
+        function removeSelectedPerson (person, collection) {
+            removeItemFromCollection(person, collection);
+        }
+
         // Toggles the `like` icon
         // Swaps the Person to the correct list
         function togglePerson (person) {
@@ -118,11 +124,10 @@
 
 
         function update () {
-            // main.addPersonDisabled = main.people.length > main.limit;
             main.addPersonDisabled = main.people.length >= main.limit;
             main.removePersonDisabled = main.people.length === 0;
 
-            if ( main.people.length > main.limit ) {
+            if (main.people.length > main.limit) {
                 $log.info('We have to many people in the list!');
                 removeFirstPerson();
                 update();

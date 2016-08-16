@@ -4,7 +4,16 @@
             <span>{{ person.data.name.title }} {{ person.name.first }} {{ person.data.name.last }}</span>
             <!--<span>{{ person.data.name | json }}</span>-->
         </h2>
+
         <div class="pull-right">
+            <button type="button"
+                    class="btn btn-success"
+                    ng-click="person.removeSelectedPerson( person.data )">
+                <span>
+                    <i ng-if="true" class="fa fa-trash-o fa-lg"></i>
+                </span>
+            </button>
+
             <button type="button"
                     class="btn btn-success"
                     ng-click="person.toggleSelectPerson( person.data )">

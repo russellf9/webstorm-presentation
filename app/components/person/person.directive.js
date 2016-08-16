@@ -42,10 +42,19 @@
 
         person.toggleSelectPerson = toggleSelectPerson;
 
+        person.removeSelectedPerson = removeSelectedPerson;
+
 
         function toggleSelectPerson( aPerson ) {
             if (typeof person.toggleSelectFn == 'function') {
                 person.toggleSelectFn()( aPerson );
+            }
+        }
+
+        function removeSelectedPerson( aPerson ) {
+            console.log('removeSelectedPerson ', aPerson);
+            if (typeof person.removeSelectedPersonFn === 'function') {
+                person.removeSelectedPersonFn()( aPerson );
             }
         }
     }
@@ -56,6 +65,7 @@
             scope: {
                 data: '=',
                 toggleSelectFn: '&',
+                removeSelectedPersonFn: '&',
                 updateFn: '&'
             },
             templateUrl: 'components/person/person.html',

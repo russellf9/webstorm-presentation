@@ -40,6 +40,8 @@
 
         peopleList.toggleSelectPerson = toggleSelectPerson;
 
+        peopleList.removeSelectedPerson = removeSelectedPerson;
+
         function removePerson () {
             if (typeof peopleList.removeFn === 'function') {
                 peopleList.removeFn()();
@@ -53,6 +55,14 @@
             }
         }
 
+        function removeSelectedPerson( person ) {
+            console.log('peopleList::removeSelectedPerson');
+            if (typeof peopleList.removeSelectedPersonFn === 'function') {
+                peopleList.removeSelectedPersonFn()(person, peopleList.people );
+            }
+
+        }
+
     }
 
     function peopleList () {
@@ -61,6 +71,7 @@
             scope: {
                 people: '=?',
                 toggleSelectFn: '&',
+                removeSelectedPersonFn: '&',
                 removeFn: '&'
             },
             templateUrl: 'components/people/people-list.html',
